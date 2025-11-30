@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "cucumber-rerun-scenarios": "npx cucumber-js --tags @Regression --retry 1 --format html:Reports/cucumber-report.html --exit"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
