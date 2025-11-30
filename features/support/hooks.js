@@ -8,7 +8,7 @@ const {POManager} = require("../../pageObjects/POManager");
 
 Before(async function() {
     const browser = await playwright.chromium.launch({
-        headless: true
+        headless: false
     });
     const context = await browser.newContext();
     this.page = await context.newPage();

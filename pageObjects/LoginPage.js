@@ -24,8 +24,8 @@ class LoginPage{
     }
 
     async verifyIncorrectLogin() {
-
         expect(await this.errorMessage.textContent()).toHaveText("Incorrect email or password");
+        console.log("Error message validated");
     }
 
 }
