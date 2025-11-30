@@ -10,7 +10,7 @@ Given('a user logins to Client Application with {string} and {string}', {timeout
     const context = await browser.newContext();
     const page = await context.newPage();
 
-    //By assigning this. before poManager -- this is called world constructor. It will be accessible outside this block as well.
+    // By assigning this. before poManager -- this is called world constructor. It will be accessible outside this block as well.
     this.poManager = new POManager(page, expect);
 
     const loginPage = this.poManager.getLoginPage();
