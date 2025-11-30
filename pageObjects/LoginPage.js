@@ -19,12 +19,13 @@ class LoginPage{
         await this.username.fill(username);
         await this.passrd.fill(password);
         await this.loginButton.click();
-    
-        await this.page.waitForLoadState('networkidle');
+
+        const msg = this.errorMessage.textContent();
+        return msg;
     }
 
-    async verifyIncorrectLogin() {
-        expect(await this.errorMessage.textContent()).toHaveText("Incorrect email or password");
+    async verifyIncorrectLogin(msg) {
+        expect(msg).toContain("Incorrect email or password");
         console.log("Error message validated");
     }
 
