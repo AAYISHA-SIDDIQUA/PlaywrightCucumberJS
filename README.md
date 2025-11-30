@@ -18,5 +18,9 @@ In playwright cucumber js -- only the scenario and scenario outline can be run i
 To run parallel, --> npx cucumber-js features/clientAppFunctionality.feature --parallel 2 --exit
 
 
+In order to generate the html report, use below command: 
+npx cucumber-js features/clientAppFunctionality.feature --parallel 2 --format html:Report/cucumber-report.html --exit
+
+
 Refer the below documentation for more: 
 https://github.com/cucumber/cucumber-js
