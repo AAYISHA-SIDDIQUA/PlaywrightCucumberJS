@@ -1,9 +1,12 @@
+const { expect } = require("@playwright/test");
+
 class LoginPage{
     constructor(page){
         this.page = page;
         this.username = page.getByPlaceholder("email@example.com");
         this.passrd = page.getByPlaceholder("enter your passsword");
         this.loginButton = page.locator("[value='Login']");
+        this.errorMessage = page.locator("#toast-container");
     }
 
 
@@ -18,6 +21,11 @@ class LoginPage{
         await this.loginButton.click();
     
         await this.page.waitForLoadState('networkidle');
+    }
+
+    async verifyIncorrectLogin() {
+
+        expect(await this.errorMessage.textContent()).toHaveText("Incorrect email or password");
     }
 
 }

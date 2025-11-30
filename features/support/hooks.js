@@ -4,6 +4,8 @@ const {Before, After, AfterStep, Status} = require("@cucumber/cucumber");
 const {POManager} = require("../../pageObjects/POManager");
 
 
+//We can also add tagged hooks like Before({tags: "Validation"}, async funtion()) --> this will only run before @Validation tagged features or scenarios
+
 Before(async function() {
     const browser = await playwright.chromium.launch({
         headless: true
