@@ -21,6 +21,9 @@ To run parallel, --> npx cucumber-js features/clientAppFunctionality.feature --p
 In order to generate the html report, use below command: 
 npx cucumber-js features/clientAppFunctionality.feature --parallel 2 --format html:Report/cucumber-report.html --exit
 
+If you want to rerun flaky scenarios, use below command: 
+npx cucumber-js --tags "@Regression" --retry 1 --format html:Reports/cucumber-report.html --exit
+
 
 Refer the below documentation for more: 
 https://github.com/cucumber/cucumber-js
