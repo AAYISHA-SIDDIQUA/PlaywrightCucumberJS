@@ -7,4 +7,14 @@ Scenario: Place a Valid Order
     Then the product "ZARA COAT 3" should be visible on the cart page 
     When the user enters all valid details and submits the Order
     Then the order id should be displayed in the Orders section 
+
+@Validation
+Scenario Outline: Incorrect Login
+    Given a user logs into client App with "<username>" and "<password>"
+    Then the error message should be displayed
+
+    Examples: 
+    | username            |    password      |
+    |testspace@gmail.com  |  test@31         |
+    |teatnim@gmail.com    | dfaoke24         |
     

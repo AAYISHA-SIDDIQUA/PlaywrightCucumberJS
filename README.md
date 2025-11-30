@@ -14,6 +14,9 @@ npx cucumber-js features/Validation.feature --exit
 If you want to run a specific tagged feature files, use below: 
 npx cucumber-js --tags "@Regression" --exit
 
+In playwright cucumber js -- only the scenario and scenario outline can be run in parallel mode and not the feature files. 
+To run parallel, --> npx cucumber-js features/clientAppFunctionality.feature --parallel 2 --exit
+
 
 Refer the below documentation for more: 
 https://github.com/cucumber/cucumber-js
